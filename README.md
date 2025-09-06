@@ -10,7 +10,7 @@ running is as simple as grabbing the head node's disk image and the docker-compo
 
 Docker is native on linux. Ensure you have docker-compose v2 installed, then do the following:
 
-- ` git pull github.com/dhelgerson/boxocluster`
+- `git pull github.com/dhelgerson/boxocluster`
 - `curl -LO placeholder for vm image`
 - `docker compose up -d`
 - `docker compose logs -f`
