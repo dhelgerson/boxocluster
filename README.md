@@ -15,7 +15,7 @@ git clone https://github.com/dhelgerson/boxocluster.git
 cd boxocluster
 curl -LO placeholder for vm image
 docker compose up -d
-docker compose logs -f
+docker compose logs -f &
 ```
 
 - follow the instructions to connect to your new virtual cluster
