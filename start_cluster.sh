@@ -1,9 +1,4 @@
 #!/bin/bash
-#SBATCH --cpus-per-task 4
-#SBATCH --mem-per-cpu 1G
-#SBATCH --ntasks-per-node 4
-#SBATCH -o slurm.out
-#SBATCH -t 02:00:00
 
 # setup env
 # since we're forking subjobs, we need to export these
