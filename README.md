@@ -4,7 +4,7 @@ Run your own Virtual HPC cluster using QEMU
 
 ## Getting Started
 
-running is as simple as grabbing the head node's disk image and the docker-compose file and runnign the stack.
+running is as simple as grabbing the head node's disk image and the docker-compose file and running the stack.
 
 ### Linux
 
