@@ -1,0 +1,12 @@
+#version: "3.9"
+
+services:
+  boxocluster:
+    build: .
+    image: boxocluster
+    ports:
+      - "2222:2222"
+    volumes:
+      # Replace ./hostfile.txt with the path to your local file
+      # and /container/file.txt with the path inside the container
+      - ./boxocluster-node-1.qcow2:/apps/boxocluster-node-1.qcow2
