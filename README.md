@@ -12,7 +12,7 @@ Docker is native on linux. Ensure you have docker-compose v2 installed, then do 
 
 ```bash
 git clone https://github.com/dhelgerson/boxocluster.git
-cd boxocluste
+cd boxocluster
 curl -LO placeholder for vm image
 docker compose up -d
 docker compose logs -f
