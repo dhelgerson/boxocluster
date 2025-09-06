@@ -3,7 +3,7 @@
 services:
   boxocluster:
     build: .
-    image: boxocluster
+    image: ghcr.io/dhelgerson/boxocluster:main
     privileged: true
     ports:
       - "2222:2222"
