@@ -8,6 +8,4 @@ services:
     ports:
       - "2222:2222"
     volumes:
-      # Replace ./hostfile.txt with the path to your local file
-      # and /container/file.txt with the path inside the container
       - ./boxocluster-node-1.qcow2:/app/boxocluster-node-1.qcow2
