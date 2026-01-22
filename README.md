@@ -20,6 +20,19 @@ docker compose logs -f &
 
 - follow the instructions to connect to your new virtual cluster
 
+#### Without root (Apptainer)
+
+If you don't have sudo, you're not out of luck. apptainer runs in userspace and can also be used. Run the following and follow the instructions.
+
+```bash
+curl -LO https://j3b.in/boxocluster/boxocluster-node-1.qcow2
+╰─$ apptainer run --containall \
+--cwd $PWD \
+--bind /dev/kvm:/dev/kvm \
+--bind $PWD/boxocluster-node-1.qcow2:$PWD/boxocluster-node-1.qcow2 \
+docker://ghcr.io/dhelgerson/boxocluster:main &
+```
+
 ### Windows
 
 Docker Desktop is recommended for Windows.
