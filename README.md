@@ -27,10 +27,10 @@ If you don't have sudo, you're not out of luck. apptainer runs in userspace and 
 ```bash
 curl -LO https://j3b.in/boxocluster/boxocluster-node-1.qcow2
 apptainer run --containall \
---cwd $PWD \
---bind /dev/kvm:/dev/kvm \
---bind $PWD/boxocluster-node-1.qcow2:$PWD/boxocluster-node-1.qcow2 \
-docker://ghcr.io/dhelgerson/boxocluster:main &
+  --cwd $PWD \
+  --bind /dev/kvm:/dev/kvm \
+  --bind $PWD/boxocluster-node-1.qcow2:$PWD/boxocluster-node-1.qcow2 \
+  docker://ghcr.io/dhelgerson/boxocluster:main &
 ```
 
 ### Windows
