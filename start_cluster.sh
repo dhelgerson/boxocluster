@@ -27,7 +27,7 @@ sleep 20
 # tell user how to connect
 
 echo "connect to the head node with 'ssh admin@localhost -p 2222'"
-echo "the password is 'tuxcluster'
+echo "the password is 'tuxcluster'"
 
 # start compute nodes
 
