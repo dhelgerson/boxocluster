@@ -8,6 +8,10 @@ running is as simple as grabbing the head node's disk image and the docker-compo
 
 ### Linux
 
+Linux has a host of container runtimes, here I'll show one that requires root and one that does not
+
+#### With root (Docker)
+
 Docker is native on linux. Ensure you have docker-compose v2 installed, then do the following:
 
 ```bash
@@ -94,3 +98,7 @@ Docker Desktop is recommended for macOS.
    * You should see Docker and Docker Compose versions printed.
 
 5. From here, you can follow the steps for Linux.
+
+## What Next
+
+After you have a running virtual cluster, feel free to follow the steps at https://j3b.in/pihpc to continue setting it up.
