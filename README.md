@@ -33,7 +33,7 @@ curl -LO https://j3b.in/boxocluster/boxocluster-node-1.qcow2
 apptainer run --containall \
   --cwd $PWD \
   --bind /dev/kvm:/dev/kvm \
-  --bind $PWD/boxocluster-node-1.qcow2:$PWD/boxocluster-node-1.qcow2 \
+  --bind $PWD:$PWD \
   docker://ghcr.io/dhelgerson/boxocluster:main &
 ```
 
