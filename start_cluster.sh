@@ -15,7 +15,7 @@ bash -c 'qemu-system-x86_64 \
 -enable-kvm \
 -drive file=boxocluster-node-1.qcow2,media=disk,if=virtio \
 -device virtio-net,netdev=n1 \
--netdev socket,id=n1,mcast=224.0.0.128:2222 \
+-netdev socket,id=n1,mcast=239.192.0.1:2224 \
 -nic user,hostfwd=tcp:0.0.0.0:2222-:22 \
 -nographic \
 > headnode.out ' &
@@ -41,7 +41,7 @@ bash -c 'qemu-system-x86_64 \
 -m 4G \
 -enable-kvm \
 -device virtio-net,netdev=n3,mac=52:54:00:12:34:5$SLURM_LOCALID \
--netdev socket,id=n3,mcast=224.0.0.128:2222 \
+-netdev socket,id=n3,mcast=239.192.0.1:2224 \
 -nographic \
 > compute$SLURM_LOCALID.out ' &
 done
