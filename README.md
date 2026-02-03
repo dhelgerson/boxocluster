@@ -2,34 +2,34 @@
 
 Run your own Virtual HPC cluster using QEMU
 
-## Getting Started
+# Getting Started
 
-running is as simple as grabbing the head node's disk image and the docker-compose file and running the stack.
+Running Boxocluster is as simple as grabbing the head node's disk image and the docker-compose file and running the stack.
 
-### Linux
+## Linux
 
-Linux has a host of container runtimes, here I'll show one that requires root and one that does not
+Linux has a host of container run-times, here I'll show one that requires root and one that does not
 
-#### With root (Docker)
+### With Docker
 
 Docker is native on linux. Ensure you have docker-compose v2 installed, then do the following:
 
 ```bash
 git clone https://github.com/dhelgerson/boxocluster.git
 cd boxocluster
-curl -LO https://j3b.in/boxocluster/boxocluster-node-1.qcow2
+curl -LO https://boxocluster.com/boxocluster-node-1.qcow2
 docker compose up -d
 docker compose logs -f &
 ```
 
 - follow the instructions to connect to your new virtual cluster
 
-#### Without root (Apptainer)
+### With Apptainer
 
 If you don't have sudo, you're not out of luck. apptainer runs in userspace and can also be used. Run the following and follow the instructions.
 
 ```bash
-curl -LO https://j3b.in/boxocluster/boxocluster-node-1.qcow2
+curl -LO https://boxocluster.com/boxocluster-node-1.qcow2
 apptainer run --containall \
   --cwd $PWD \
   --bind /dev/kvm:/dev/kvm \
@@ -37,7 +37,7 @@ apptainer run --containall \
   docker://ghcr.io/dhelgerson/boxocluster:main &
 ```
 
-### Windows
+## Windows
 
 Docker Desktop is recommended for Windows.
 
@@ -66,9 +66,9 @@ Docker Desktop is recommended for Windows.
      ```
    * You should see Docker and Docker Compose versions printed.
 
-5. From here, you can follow the steps for Linux.
+5. From here, you can follow the steps for [Docker](#with-docker).
 
-### macOS
+## macOS
 
 Docker Desktop is recommended for macOS.
 
@@ -97,8 +97,8 @@ Docker Desktop is recommended for macOS.
      ```
    * You should see Docker and Docker Compose versions printed.
 
-5. From here, you can follow the steps for Linux.
+5. From here, you can follow the steps for [Docker](#with-docker)
 
 ## What Next
 
-After you have a running virtual cluster, feel free to follow the steps at https://j3b.in/pihpc to continue setting it up.
+After you have a running virtual cluster, feel free to follow the steps at https://boxocluster.com to continue setting it up.
